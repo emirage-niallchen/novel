@@ -1,0 +1,33 @@
+novel:
+  cors:
+    allow-origins:
+      - http://154.8.165.216:1024
+      - http://154.8.165.216:8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://154.8.165.216:3307/novel?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  data:
+    # Redis ??
+    redis:
+      host: 154.8.165.216
+      port: 6379
+      password: 123456
+  elasticsearch:
+    uris:
+      - https://my-deployment-ce7ca3.es.us-central1.gcp.cloud.es.io:9243
+    username: elastic
+    password: 123456
+  rabbitmq:
+    addresses: "amqp://emirage:luo123456789@154.8.165.216"
+    virtual-host: novel
+    template:
+      retry:
+        # ????
+        enabled: true
+        # ??????
+        max-attempts: 3
+        # ????????????????
+        initial-interval: "3s"
