@@ -9,8 +9,10 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 /**
- * @author ChenBoyun
- * @date 2023-05-30 21:32
+ * 跨域配置demo
+ *
+ * @author emirage
+ * @date 2023/6/26
  */
 @Configuration
 @EnableConfigurationProperties(CorsProperties.class)
@@ -23,7 +25,7 @@ public class CorsConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         // 允许的域,不要写*，否则cookie就无法使用了
-        for (String allowOrigin : corsProperties.getAllowOrigins()) {
+        for (String allowOrigin : corsProperties.allowOrigins()) {
             config.addAllowedOrigin(allowOrigin);
         }
         // 允许的头信息
@@ -35,7 +37,7 @@ public class CorsConfig {
 
         UrlBasedCorsConfigurationSource configurationSource = new UrlBasedCorsConfigurationSource();
         // 添加映射路径，拦截一切请求
-        configurationSource.registerCorsConfiguration("/**",config);
+        configurationSource.registerCorsConfiguration("/**", config);
         return new CorsFilter(configurationSource);
     }
 

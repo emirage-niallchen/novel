@@ -61,6 +61,7 @@ public class DatabaseConsts {
         }
 
         public static final String COLUMN_USER_ID = "user_id";
+        public static final String COLUMN_PEN_NAME = "pen_name";
 
     }
 
@@ -75,8 +76,16 @@ public class DatabaseConsts {
 
         public static final String COLUMN_WORK_DIRECTION = "work_direction";
 
+        public static final String COLUMN_NAME = "name";
     }
 
+    public static class CrawlSourceTable {
+        private CrawlSourceTable() {
+            throw new IllegalStateException(SystemConfigConsts.CONST_INSTANCE_EXCEPTION_MSG);
+        }
+
+        public static final String  COLUMN_SOURCE_NAME = "source_name";
+    }
     /**
      * 小说表
      */

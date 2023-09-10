@@ -1,11 +1,6 @@
 package cn.com.emirage.novel.core.constant;
 
-/**
- * API 路由常量
- *
- * @author xiongxiaoyang
- * @date 2022/5/12
- */
+
 public class ApiRouterConsts {
 
     private ApiRouterConsts() {
@@ -94,4 +89,8 @@ public class ApiRouterConsts {
     public static final String API_FRONT_SEARCH_URL_PREFIX =
         API_FRONT_URL_PREFIX + SEARCH_URL_PREFIX;
 
+   /**
+     * 爬虫相关API请求路径前缀
+     */
+   public static final String API_CRAWL_URL_PREFIX = "/api/crawl";
 }

@@ -55,6 +55,11 @@ public class CacheConsts {
     public static final String BOOK_CATEGORY_LIST_CACHE_NAME = "bookCategoryListCache";
 
     /**
+     * 小说分类所有有表缓存
+     */
+    public static final String BOOK_CATEGORY_LIST_CACHE_ALL_NAME = "bookCategoryListAllCache";
+
+    /**
      * 小说信息缓存
      */
     public static final String BOOK_INFO_CACHE_NAME = "bookInfoCache";

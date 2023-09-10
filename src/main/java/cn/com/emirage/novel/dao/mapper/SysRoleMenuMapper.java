@@ -1,5 +1,6 @@
 package cn.com.emirage.novel.dao.mapper;
 
+
 import cn.com.emirage.novel.dao.entity.SysRoleMenu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -8,8 +9,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 角色与菜单对应关系 Mapper 接口
  * </p>
  *
- * @author ${author}
- * @since 2023/05/31
+ * @author xiongxiaoyang
+ * @date 2022/05/11
  */
 public interface SysRoleMenuMapper extends BaseMapper<SysRoleMenu> {
 

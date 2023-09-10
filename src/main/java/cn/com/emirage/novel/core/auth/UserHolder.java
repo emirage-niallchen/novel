@@ -8,22 +8,36 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class UserHolder {
+
+    /**
+     * 当前线程用户ID
+     */
     private static final ThreadLocal<Long> userIdTL = new ThreadLocal<>();
-    private static final ThreadLocal<Long> authorIdTL= new ThreadLocal<>();
-    public void setUserIdTL(Long userId) {
+
+    /**
+     * 当前线程作家ID
+     */
+    private static final ThreadLocal<Long> authorIdTL = new ThreadLocal<>();
+
+    public void setUserId(Long userId) {
         userIdTL.set(userId);
     }
-    public Long getUserId(){
+
+    public Long getUserId() {
         return userIdTL.get();
     }
-    public void setAuthorIdTL(Long authorId) {
+
+    public void setAuthorId(Long authorId) {
         authorIdTL.set(authorId);
     }
-    public Long getAuthorId(){
+
+    public Long getAuthorId() {
         return authorIdTL.get();
     }
-    public void clear(){
+
+    public void clear() {
         userIdTL.remove();
         authorIdTL.remove();
     }
+
 }
